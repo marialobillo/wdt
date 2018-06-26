@@ -1,0 +1,27 @@
+
+h2{
+  color: fuchsia;
+}
+
+#idselector{
+  background-color: turquoise;
+}
+
+.selectorclass{
+  opacity: 0.5;
+}
+
+div.selectorclass{
+  border-style: solid;
+}
+ @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+.button{
+  color: #000000;
+  background-color: #114433;
+  width:200px;
+  text-align:center;
+  padding:20px;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  font-family: 'Indie Flower', cursive;
+}
