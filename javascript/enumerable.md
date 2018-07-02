@@ -12,7 +12,7 @@ A: Filter function select the items and returns them.
 
 > What is the difference between the map() and filter() functions?
 
-A: Map function iterate the array item and Filter function is select some of the items.
+A: Map function iterates the items and Filter function is selecting some of the items.
 
 ### Code Practice
 
