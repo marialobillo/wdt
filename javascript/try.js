@@ -1,13 +1,9 @@
 
-let shoppingCart = [20, 15];
 
-function getTotalCost(prices){
-  let total = 0;
-  prices.map( item => {
-    total += item;
-  });
+let numbers = [1,2,3,4,5,6,7,8,9,2,3,4,5,6,1,2,3,4,5,6,7,8,8,4,3,2];
 
-  return total;
-}
+let sum = numbers
+  .filter(num => num > 3)
+  .reduce((sum, num) => sum + num)
 
-getTotalCost(shoppingCart);
+console.log(sum);
