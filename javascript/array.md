@@ -8,7 +8,7 @@ A: An array is a collection of items separated by comas.
 
 > In JavaScript can you have a single array with a string and a number in it?
 
-A: Of course, by it's not recommended because it's much easier work with the same type of data.
+A: Of course, but it's not recommended because it's much easier work with the same type of data.
 
 > In JavaScript do arrays start at index 0 or index 1?
 
