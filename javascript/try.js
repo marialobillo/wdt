@@ -1,19 +1,13 @@
 
-var shoppingCart = [
-  {
-      id: 0,
-      name: 'Mens Shirt',
-      price: 20,
-      size: 'Large'
-  },
-  {
-  id: 1,
-  name: 'kids shirt',
-  price: 15,
-  size: 'small'
-}
-]
+let shoppingCart = [20, 15];
 
-for(let i = 0; i < shoppingCart.length ; i++){
-  console.log(shoppingCart[i].name);
+function getTotalCost(prices){
+  let total = 0;
+  prices.map( item => {
+    total += item;
+  });
+
+  return total;
 }
+
+getTotalCost(shoppingCart);
