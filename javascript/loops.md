@@ -4,11 +4,11 @@
 
 > What are the three things you need to provide for a loop? I.e., in for(a ; b ; c){}, what are a, b, and c?
 
-A: the beginning of the loop, the end of the loop and the iterator.
+A: ( initialization ; condition ; final-expression ) in other words the beginning of the loop, the end of the loop and the iterator.
 
 > Describe infinite loops and how to avoid them.
 
-A: You should pay attention on definition where the loop begins and where ends are correct, use map() if you can, and other loops like while loop.
+A: An infinite loop is a loop that the condition is always true, so the loop never stops. In order to avoid infinite loops from your code you should pay attention on definition where the loop begins and where ends are correct, use map() if you can, and other loops like while loop.
 
 ### Code Practice
 
