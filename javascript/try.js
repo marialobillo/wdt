@@ -1,11 +1,13 @@
-
-
-var greeting = function(){
-  var greet = 'Hello';
-  function sayHello(){
-    console.log(greet);
-  }
-  return sayHello;
+var Clothes = class {
+    constructor(name, size, price){
+        this.name = name;
+        this.size = size;
+        this.price = price;
+    }
 }
-var word = greeting();
-word()
+
+class Shirt extends Clothes{
+  constuctor(){
+    super("Red Shirt", "M", "12.50");
+  }
+}
