@@ -1,16 +1,11 @@
-function add(arr){
-    sum = 0;
-    for(var i = 0; i < arr.length; i++){
-      sum = sum + arr[i];
-    }
-    return sum;
+
+
+var greeting = function(){
+  var greet = 'Hello';
+  function sayHello(){
+    console.log(greet);
   }
-
-  console.log(add([1,2,3,4,5]));
-
-
-  function isAString(x){
-    console.log(typeof x == 'string');
-  }
-
-  isAString('Hello');
+  return sayHello;
+}
+var word = greeting();
+word()
