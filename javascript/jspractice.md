@@ -5,6 +5,7 @@
 > Create a function that accepts one parameter. This parameter will be an array of objects. Each object will have 1 property name. The function should return a new array that is populated with the name properties from the objects.
 
 > Example js namesFunction([{name: 'Tacos'},{name: 'Burritos'},{name: 'Enchiladas'}]); //returns ['Tacos', 'Burritos', 'Enchiladas']
+
 ```
 function getMenu(menu){
   let menuList = [];
@@ -57,6 +58,7 @@ Create a function named addGoodbye() that accepts one string parameter. It shoul
 
 Example js addGoodbye('Jacob') //returns "Hello! Jacob, Goodbye"
 
+```
 function addGoodbye(str){
   return str + ", Goodbye";
 }
@@ -64,6 +66,7 @@ function addGoodbye(str){
 function addHelloGoodBye(str){
   return 'Hello! ' + addGoodbye(multiplebyTwice(n));
 }
+```
 
 ## Fifth:
 
@@ -71,12 +74,14 @@ Create a function that accepts one array parameter. It will be an array of numbe
 
 Example js betweenOneAndHundred([-12, 0, 1, 100, 56, 12354, 9845]) //returns [1, 100, 56] Assessment-ish questions
 
+```
 function betweenOneAndHundred(arrNumbers){
   const filtered = arrNumbers.filter( (item) => {
     return item > 0 && item <= 100;
   });
   return filtered;
 }
+```
 
 console.log(betweenOneAndHundred([-12, 0, 1, 100, 56, 12354, 9845]));
 
@@ -92,7 +97,7 @@ convertStrToObj('string 1') //returns { first: 'string 1', second: 'N/A', third:
 
 convertStrToObj() //returns { first: 'N/A', second: 'N/A', third: 'N/A' } ```
 
-
+```
 function convertStrToObj(first, second, third){
   let obj = {};
   if(first != undefined){
@@ -112,6 +117,7 @@ function convertStrToObj(first, second, third){
   }
   return obj;
 }
+```
 
 ## Second
 
@@ -119,12 +125,13 @@ Create a function named multiplyNumsBy() that accepts two parameters. The first 
 
 Examples - js multiplyNumsBy([1,2,3,4,5], 5) // returns [5,10,15,20,25] multiplyNumsBy([12,4,9,6,40], 2) // returns [24,8,18,12,80] Harder Ones -
 
-
+```
 function multiplyNumbsBy(numbers, number){
   return numbers.map((item) => {
     return item * number;
   });
 }
+```
 
 ## First:
 
@@ -132,14 +139,40 @@ Create a function named numberTypes() that accepts an array of numbers as its on
 
 Examples - js numberTypes([0,2,4,6]) //returns 'even' numberTypes([1,3,5,7]) //returns 'odd' numberTypes([1,2,9,6]) //returns 'both'
 
+```
 function numberTypes(numbers){
-    for(let i = 0; numbers.length; i++){
-      if( numbers[i])
+    let counter = 0;
+    for(let i = 0; i < numbers.length; i++){
+      if( numbers[i] % 2 == 0){
+        counter += 1;
+      } else {
+        counter -= 1;
+      }
+    }
+
+    if (counter == numbers.length){
+      return 'even';
+    } else if (counter == -numbers.length){
+      return 'odd';
+    } else {
+      return 'both';
     }
 }
+```
+
 
 ## Second:
 
 Create a function named sequential() that accepts 4 number parameters. Return true if the numbers are sequential and count 1 at a time, false otherwise.
 
 Examples - js sequential(1,2,3,4) //returns true sequential(1,3,5,6) //returns false sequential(5,6,7,8) //returns true sequential(15,18,123,4534) //returns false sequential(1234,1235,1236,1237) //returns true
+
+```
+function sequential(a, b, c, d){
+  if ((a + 3) === (b + 2) && (c + 1) === d){
+    return true;
+  } else{
+    return false;
+  }
+}
+```
