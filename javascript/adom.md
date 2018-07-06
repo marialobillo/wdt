@@ -28,12 +28,12 @@ A: Handles are a set of functions that manage what happends when the event is la
 <script type="text/javascript">
 
   let menu = document.getElementById('list');
-  let li = document.createElement('li');
-  li.appendChild(document.createTextNode("Mens T-shirt"));
-  menu.appendChild(li);
-
-  document.getElementById('biker_jacket').onclick = () => {
-    console.log('Biker Jacket');
+  let liList = menu.getElementsByTagName('li');
+  for(let i = 0; i< liList.length; i++){
+    liList[i].onclick = (event) => {
+      console.log(event.target.innerText);
+    }
   }
+
 </script>
 ```
