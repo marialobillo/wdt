@@ -22,7 +22,8 @@ A: Handles are a set of functions that manage what happends when the event is la
 ```
 <h3>Shirts</h3>
 <ul id='list'>
-    <li id="biker_jacket">Biker Jacket</li>
+  <li>Biker Jacket</li>
+  <li>Mens Shirt</li>
 </ul>
 
 <script type="text/javascript">
