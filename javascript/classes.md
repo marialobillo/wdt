@@ -32,8 +32,10 @@ var Clothes = class {
 }
 
 class Shirt extends Clothes{
-  constructor(){
-    super("Red Shirt", "M", "12.50");
+  constructor(name, size, price){
+    this.name = name;
+    this.size = size;
+    this.price = price;
   }
 }
 ```
