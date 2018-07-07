@@ -12,11 +12,8 @@ A: Don't Repeat Yourself, means that every piece of the system should have only 
 
 ```
 function Product(name, price){
-  constructor(name, price){
     this.name = name;
     this.price = price;
-  }
-
 }
 
 let shirt = new Product('red shirt', 10.50);

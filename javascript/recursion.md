@@ -21,3 +21,13 @@ A: Maybe the code would be much longer and definitively no easy to read.
 ### Code Practice
 
 > Create a recursive function that will take a positive integer parameter n and return the factorial of n.
+
+```
+function factorial(n){
+  if (n <= 1){
+    return 1;
+  } else {
+    return n * factorial(n-1);
+  }
+}
+```
