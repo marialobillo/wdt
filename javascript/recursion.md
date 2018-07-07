@@ -12,11 +12,11 @@ A: When it needs a function that call itself.
 
 > What is a base case and what is its role in a recursive function?
 
-A: A good example of recursion is the fibonacci series.
+A: The base case is when the function ends, for that case that there is not more iteration for the recursive loop.
 
 > What would happen if a programmer did not utilize a base case within a recursive function?
 
-A: Maybe the code would be much longer and definitively no easy to read.
+A: If a programmer did not use a base case maybe the recursive loop never ends.
 
 ### Code Practice
 
