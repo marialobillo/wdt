@@ -26,15 +26,58 @@ A:
 
 > Explain the difference between synchronous and asynchronous code.
 
-A:
+A: Synchronous code is going to wait until the current task is done for start the next task and the asynchronous code you can move another task before it finished.
 
 > Explain what a JavaScript promise is.
 
-A:
+A: Every time you make an asynchronous request, you will get back a promise. A promise has different states: pending, fulfilled, and rejected.
 
 > Explain why CORS exists and how we can work around it.
 
-A:
+A: CORS is a mechanism that allows resources on one web page to be requested from a site outside the domain of the original webpage.
 
 > Create a fetch request in JavaScript.
-It is time to build HackerNews from scratch! But you need easy access to an API for a list of all the stories currently there. A. Go to News API and click 'Get API Key' sign up for a free API key. B. Use your API key to create a fetch using this URL: https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=<YOUR_API_KEY_HERE> C. Loop through the result data, and for each story on HackerNews, create an <li> tag that contains the contents of the story.
+
+A:
+
+```
+let url = "https://cors-anywhere.herokuapp.com/http://recipepuppy.com/api";
+fetch(url)
+  .then( r => {
+      console.log(r);
+    })
+  .catch( e => {
+    console.log('An error occurred: ' + e);
+    });
+```
+
+
+> It is time to build HackerNews from scratch! But you need easy access to an API for a list of all the stories currently there.
+A. Go to News API and click 'Get API Key' sign up for a free API key.
+B. Use your API key to create a fetch using this URL: https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=<YOUR_API_KEY_HERE>
+C. Loop through the result data, and for each story on HackerNews, create an <li> tag that contains the contents of the story.
+
+```
+let url = "https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=0c814ff20fd342e5b844a000380b54f2";
+
+fetch(url)
+.then(r => {
+  return r.json();
+})
+.then(data => {
+  let articles = data.articles;
+  let articleList = document.createElement("ul");
+  let body = document.querySelector("body");
+  body.appendChild(articleList);
+  articles.map(article => {
+    let articleItem = document.createElement("li");
+    articleItem.innerHTML =
+      '<a href="' + article.url + '">' + article.title + "</a>" +
+      '<p>' + article.description + '</p>';
+    articleList.appendChild(articleItem);
+  });
+})
+.catch(e => {
+  console.log(`An error occurred: ${e}`);
+});
+```
