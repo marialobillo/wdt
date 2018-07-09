@@ -13,15 +13,15 @@
 
   <script type="text/javascript">
   let mydiv = document.querySelector('#myDiv');
-  let paragraphs = mydiv.getElementsByTagName('p');
-  for (let i = 0;i < paragraphs.length;i++ ){
-    paragraphs[i].onclick = (event) => {
-    console.log("clicked");
-    let newPa = '<p>New paragraph under ' + event.target.innerText + '</p>';
-    event.target.insertAdjacentHTML( 'afterend',  newPa );
-
+  let Items = mydiv.getElementsByTagName('p');
+  for (let i = 0;i < Items.length;i++ ){
+    Items[i].addEventListener("click", addPTag);
   }
-}
+
+  function addPTag(){
+    let item = '<p>'+ Date() +'</p>';
+    event.target.insertAdjacentHTML('afterend', item);
+  }
   </script>
 </body>
 </html>
