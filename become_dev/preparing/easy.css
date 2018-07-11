@@ -1,0 +1,35 @@
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #828282;
+}
+
+.menu{
+  background-color: #ff6600;
+  color: black;
+  margin: 0 5%;
+  font-size: 11pt;
+
+}
+
+.logo{
+  font-weight: 700;
+  margin: 0 10px;
+  display: inline-block;
+  float: left;
+}
+
+ ul{
+  list-style-type: none;
+}
+
+.top-menu ul li{
+  display: inline;
+
+}
+
+
+
+.content{
+  background-color: blue;
+}

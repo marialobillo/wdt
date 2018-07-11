@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Easy Way</title>
+    <link rel="stylesheet" href="easy.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="menu">
+        <div class="logo">
+          Hacker News
+        </div>
+        <div class="top-menu">
+          <ul>
+            <li>welcome |</li>
+            <li>new |</li>
+            <li>threads |</li>
+            <li>comments |</li>
+            <li>show |</li>
+            <li>ask |</li>
+            <li>jobs |</li>
+            <li>submit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+    let url = "https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=0c814ff20fd342e5b844a000380b54f2";
+
+
+
+    fetch(url)
+    .then(r => {
+      return r.json();
+    })
+    .then(data => {
+      let articles = data.articles;
+      let articleList = document.createElement("ul");
+      let body = document.querySelector("body");
+      body.appendChild(articleList);
+      articles.map((article, index) => {
+        let articleItem = document.createElement("li");
+        let today = new Date();
+        //today = article.publishedAt;
+        articleItem.innerHTML =
+          '<div class="article"><span>'+ (index + 1) +'. </span>' +
+          '<a href="' + article.url + '">' + article.title + "</a>" +
+          "(" + article.source.name + ")" +
+          '<p><span>by ' + article.author + '</span><span> '+ article.publishedAt +'</span></p>';
+        articleList.appendChild(articleItem);
+      });
+    })
+    .catch(e => {
+      console.log(`An error occurred: ${e}`);
+    });
+    </script>
+  </body>
+</html>
