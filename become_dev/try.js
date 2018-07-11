@@ -1,53 +1,19 @@
-// Prototype for a product
- var Product = {
-   isPackaged: false,
-   isLoaded: false,
-   color: "uncolored",
-   paint: function (color) {
-     // The Painting Station will paint the product the desired color.
-     console.log("Painting product " + color + ".");
-     this.color = color;
-     console.log(color);
-     console.log("Product painted " + color + ".");
-   },
-   package: function (shippingType) {
-     // The Packaging Station will package the product for the shipping type specified.
-     // E.g. Next Day Shipping
-     console.log("Packaging product for " + shippingType + ".");
-     this.shippingType = shippingType;
-     console.log(shippingType);
-     this.isPackaged = true;
-     console.log("Product packaged for " + shippingType + ".");
-   },
-   loadOnTruck: function () {
-     // The Loading Station will load the product on a truck to be shipped
-     // to the customer.
-     console.log("Loading product onto truck.");
-     this.isLoaded = true;
-     console.log("Product loaded onto the truck.");
-   }
- };
+let arr = [2, 3, 7, 5, 3, 6, 3 ,1 , 9, 11, 33];
 
- var order = function (color, shippingType) {
-   // Creation Station: basic product is created.
 
-   // Object.create will create a new object that has Product as
-   // the prototype of that object. This means that any property lookups
-   // performed will look first at the instance and then at Product.
-   var product = Object.create(Product);
 
-   console.log("Basic product created.");
+function bubble(arr){
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr.length - i - 1; j++){
+      if(arr[j] > arr[j + 1]){
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
 
-   // Painting Station: product is painted.
-   product.paint(color);
-
-   // Packaging Station: product is packaged to be shipped.
-   product.package();
-
-   // Loading Station: product is loaded onto a truck.
-   product.loadOnTruck();
-
-   return product;
- };
-
- order("green", "Tomorrow");
+console.log(arr);
+console.log(bubble(arr));
