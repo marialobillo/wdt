@@ -11,6 +11,7 @@ A:
 
 - Technical Skills: (4) I think I got a lot to learn, so this is what I'm in Bloc.
 
+
 - Technical Communication: (3) I think I am not that bad, but English is not my mother tongue, so I always feel scare about that. I think practice is the better way to improve that one.
 
 - Confidence: (4) I think is one of my weakness but working on the rest it's going to improve. I feel now better than when I started on Bloc three weeks ago.
