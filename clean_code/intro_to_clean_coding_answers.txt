@@ -1,0 +1,43 @@
+## Exercises
+Please submit your answers to the following questions in a file called intro_to_clean_coding_answers.txt.
+
+1. In your own words, explain what clean code is and why it is important.
+
+A: We spend most of our time reading our code and code from others.
+So use clean code is faster and easy to read and easy to maintain
+reducing the time we need to spend on it.
+
+2. Read this article about Toyota and their use of bad code. Although you may
+not yet understand all of the topics discussed, think about another commonly
+used object that relies on computers and explain what would happen if the code
+was not created to an acceptable standard.
+
+A: Una example is an ecommerce website, that if the payment method is not
+secure or is not well built could charge another amount of money or,
+the shipping method could send the package to a wrong customer.
+
+3. Would you consider the following to be clean code? Explain why or
+why not. If not, refactor the code.
+
+FUNCTION do(x, y)               // Creating a new function
+ IF y = "F" THEN               // Check if y is equal "F"
+ SET z to (x−32) * (5/9)       // Formula to convert degrees fahrenheit to celsius
+ PRINT z                       // Print result
+ ELSE IF y = "C" THEN          // If y not equal to "F", check if equal to "C"
+ SET z to x * 1.8000 + 32.00   // Formula to convert degrees celsius to fahrenheit
+ PRINT z                       // Print result
+ END IF
+END FUNCTION
+
+It's not clean code because is not appropiate nesting and is not following
+the Squient Test because is difficult to find anything. Variable names don't explain well their purpose.
+
+FUNCTION do(oldTemperature, temperatureType)               // Creating a new function
+ IF temperatureType = "F" THEN               // Check if y is equal "F"
+  SET newTemperature to (oldTemperature−32) * (5/9)       // Formula to convert degrees fahrenheit to celsius
+  PRINT newTemperature                       // Print result
+ ELSE IF temperatureType = "C" THEN          // If y not equal to "F", check if equal to "C"
+  SET newTemperature to oldTemperature * 1.8000 + 32.00   // Formula to convert degrees celsius to fahrenheit
+  PRINT newTemperature                       // Print result
+ END IF
+END FUNCTION
